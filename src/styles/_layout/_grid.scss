@@ -1,0 +1,53 @@
+/* scss-lint:disable TrailingSemicolon */
+
+// ============================================================================
+//  Grid
+// ============================================================================
+
+// Grid setup
+// ----------------------------------------------------------------------------
+$susy: (
+  columns: 12,
+  gutters: .25,
+  global-box-sizing: Border-box,
+  debug: (
+    image: hide, // Options: show | hide | show-columns | show-baseline
+  ),
+  use-custom: (
+    rem: true,
+  )
+);
+
+// Redefine box-sizing on the root element
+html {
+  @include prefixer(box-sizing, border-box, webkit moz);
+}
+
+
+// Make all elements inherit from `html` box-sizing
+*,
+*:before,
+*:after {
+  @include prefixer(box-sizing, inherit, webkit moz);
+}
+
+
+.row {
+  @include full;
+  @include break;
+}
+
+.container-full {
+  @include container();
+  height: 100%;
+}
+
+.container {
+  @include container();
+  height: 100%;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+
+  // @include breakpoint($screen-xx-large) {
+  //   @include container($screen-xx-large);
+  // }
+}

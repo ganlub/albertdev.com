@@ -1,0 +1,460 @@
+/* scss-lint:disable DuplicateProperty, ColorVariable, IdSelector, VendorPrefix, NestingDepth */
+
+.main {
+  background-color: inherit;
+  min-height: 12%;
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  z-index: z('main');
+}
+
+/**
+ * Scroll offset anchor link hack
+ * http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-B
+*/
+#about-me:before,
+#work:before {
+  content: '';
+  display: block;
+  height: 50px;
+  margin: -49px 0 0;
+}
+
+.i-think,
+.i-know,
+.works {
+  background-color: $grey-superlight;
+}
+
+.i-am > .image {
+  background-image: url('../images/whoIam.jpg');
+  background-position: center top;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/whoIam.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/whoIam.jpg', sizingMethod='scale');
+}
+
+.i-do > .image {
+  background-image: url('../images/whatIdo.jpg');
+  background-position: center top;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/whatIdo.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/whatIdo.jpg', sizingMethod='scale');
+}
+
+.i-do-it > .image {
+  background-image: url('../images/howIdoit.jpg');
+  background-position: center center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/howIdoi.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/howIdoi.jpg', sizingMethod='scale');
+}
+
+$no-gutters: (
+	gutters: 0
+);
+
+
+.heading,
+%heading {
+
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .heading__intro {
+    color: $color-card-intro;
+  }
+
+  .heading__title {
+    color: $color-card-title;
+  }
+}
+
+.quotes,
+%quotes {
+  @include clearfix;
+  padding: 0 gutter(3);
+
+  .quotes__item {
+    @include span(12);
+    @include breakpoint($screen-small) {
+      @include gallery(6 of 12);
+    }
+  }
+
+  .quotes__item:first-child {
+    @include breakpoint($screen-small) {
+      padding-right: gutter(4);
+    }
+
+    > blockquote {
+      margin-bottom: 0;
+
+      @include breakpoint($tablet-small) {
+        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
+      }
+
+      @include breakpoint($screen-small) {
+        margin-bottom: 0;
+      }
+    }
+    }
+
+  .quotes__item:last-child {
+    display: none;
+
+    @include breakpoint($tablet-small) {
+      display: block;
+    }
+
+    @include breakpoint($screen-small) {
+      padding-left: gutter(4);
+    }
+
+    > blockquote {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.skills,
+%skills {
+  .skills__list {
+    color: $color-skills-text;
+    padding-left: gutter(3);
+
+    // &:first-child {
+    //   padding-left: 0;
+    // }
+
+    @include breakpoint($tablet-small) {
+      @include gallery(6 of 12 $no-gutters);
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoint($screen-small) {
+      @include gallery(4 of 12);
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card {
+  background-color: $color-card-background;
+  // max-height: 480px;
+
+
+  &.card-right {
+    @include breakpoint($screen-small) {
+      .info {
+        @include span(5 last $no-gutters);
+        @include breakpoint($screen-large) {
+          @include span(4 last $no-gutters);
+        }
+      }
+
+      .image {
+        @include span(7 first $no-gutters);
+        @include breakpoint($screen-large) {
+          @include span(8 first $no-gutters);
+        }
+      }
+    }
+  }
+
+  .info {
+    @extend %heading;
+    @include span(12);
+    padding: gutter(3);
+    //
+
+    @include breakpoint($screen-small) {
+      @include span(5 first $no-gutters);
+      height: 420px;
+      transition: width .4s ease-in-out;
+    }
+
+    @include breakpoint($screen-large) {
+      @include span(4 first $no-gutters);
+    }
+
+    > p {
+      color: $color-card-text;
+    }
+  }
+
+  .image {
+    @include span(12);
+    background-color: rgba($color-cover-background, .85);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+
+    @include breakpoint($screen-small) {
+      @include span(7 last $no-gutters);
+      // min-height: none;
+      height: 420px;
+      transition: width .4s ease-in-out;
+    }
+
+    @include breakpoint($screen-large) {
+      @include span(8 last $no-gutters);
+    }
+  }
+}
+
+.card-text {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
+  padding: gutter(3) 0;
+
+  @include breakpoint($screen-small) {
+    height: 420px;
+
+  }
+
+  .info {
+    @extend %heading;
+    padding: 0 gutter(3);
+  }
+
+}
+
+.works {
+  .works__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  %filter-base {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .works__item {
+    @extend %heading;
+    height: 100vw;
+    padding: gutter(3);
+    transition: width .4s ease-in-out;
+    width: 100%;
+
+    @include breakpoint($screen-small) {
+      &:hover:not(.works__item-featured) {
+
+        &::after {
+          background: rgba($black, .9);
+        }
+
+        img {
+          display: none;
+        }
+
+        > .heading__title,
+        > p {
+          display: block;
+        }
+
+        > a {
+          @include breakpoint($tablet-small) {
+            display: table;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($mobile-small (orientation landscape)) {
+      height: auto;
+    }
+
+    @include breakpoint($tablet-small) {
+      height: 50vw;
+      //justify-content: flex-end;
+      width: 50%;
+    }
+
+    @include breakpoint($tablet-large (orientation landscape)) {
+      height: 33.333333vw;
+      width: 33.333333%;
+    }
+
+    @include breakpoint($screen-small) {
+      height: 33.333333vw;
+      justify-content: center;
+      width: 33.333333%;
+    }
+
+    @include breakpoint($screen-xx-large) {
+      height: 25vw;
+      width: 25%;
+    }
+
+    img {
+      z-index: 2;
+    }
+
+    > .heading__title {
+      color: $white;
+      display: none;
+      margin-bottom: gutter(3);
+      z-index: 2;
+    }
+
+    > p {
+      color: $white;
+      display: none;
+      font-style: italic;
+      line-height: 19px;
+      z-index: 2;
+
+      @include breakpoint($tablet-small) {
+        line-height: 21px;
+        margin-bottom: gutter(3);
+      }
+    }
+
+    > a {
+      display: none;
+      z-index: 2;
+    }
+
+    &:nth-child(2) {
+      background-image: url('../images/works/balneari.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(3) {
+      background-image: url('../images/works/xaviercarles.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(4) {
+      background-image: url('../images/works/khelidon.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(5) {
+      background-image: url('../images/works/watawatch.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(6) {
+      background-image: url('../images/works/cife.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(7) {
+      background-image: url('../images/works/gorriz.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(8) {
+      background-image: url('../images/works/weboil.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(9) {
+      background-image: url('../images/works/bitday.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(10) {
+      background-image: url('../images/works/learninghub.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(11) {
+      background-image: url('../images/works/lub.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(12) {
+      background-image: url('../images/works/bayer.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(13) {
+      background-image: url('../images/works/9sv.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(14) {
+      background-image: url('../images/works/comvort.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(15) {
+      background-image: url('../images/works/trainik.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:not(.works__item-featured) {
+      @extend %filter-base;
+
+      &::after {
+        background: rgba(#000, .6);
+      }
+    }
+  }
+
+  .works__item-featured {
+
+    background-color: $yellow;
+
+    .heading__title,
+    .heading__intro {
+      color: $white;
+      display: block;
+    }
+
+    hr {
+      border-color: $white;
+      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
+      width: 80px;
+    }
+
+    p {
+      @include font-size($font-size-deci);
+      color: $white;
+      display: block;
+      font-style: italic;
+      line-height: 19px;
+    }
+  }
+}

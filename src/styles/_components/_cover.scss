@@ -1,0 +1,151 @@
+.cover {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: z('default');
+
+  > .container-full {
+    align-content: center;
+    align-items: flex-start;
+    background-color: rgba($color-cover-background, .85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: gutter(3);
+
+    /*@include breakpoint($tablet-small (orientation landscape)) {
+
+    }*/
+
+    @include breakpoint($tablet-large (orientation landscape)) {
+      align-items: center;
+    }
+
+    @include breakpoint($tablet-small (orientation portrait)) {
+      align-items: center;
+    }
+  }
+
+  > video {
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: z('below');
+  }
+
+  hr {
+    @include breakpoint($screen-xxx-large) {
+      margin-bottom: $spacing-unit-default * 1.5;
+      margin-bottom: ($spacing-unit-default * 1.5 / 16px) * 1rem;
+    }
+  }
+}
+
+.cover__title {
+  color: $color-cover-title;
+  // padding-bottom: .2em;
+
+  @include breakpoint($mobile-small (orientation landscape)) {
+    max-width: 405px;
+    text-align: left;
+  }
+
+  @include breakpoint($tablet-small (orientation landscape)) {
+    max-width: 405px;
+    text-align: left;
+  }
+
+  @include breakpoint($tablet-small (orientation portrait)) {
+    @include font-size($font-size-cover-title * 1.5);
+    letter-spacing: -5.25px;
+    line-height: 77px;
+    max-width: 470px;
+    text-align: center;
+  }
+
+  @include breakpoint($tablet-large (orientation landscape)) {
+    @include font-size($font-size-cover-title * 1.5);
+    letter-spacing: -5.25px;
+    line-height: 77px;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  @include breakpoint($screen-small) {
+    @include font-size($font-size-cover-title * 1.5);
+    letter-spacing: -5.25px;
+    line-height: 77px;
+    max-width: 750px;
+  }
+
+  @include breakpoint($screen-x-large) {
+    @include font-size($font-size-cover-title * 1.8);
+    line-height: 88px;
+    max-width: 920px;
+  }
+
+  @include breakpoint($screen-xxx-large) {
+    @include font-size($font-size-cover-title * 2.1);
+    line-height: 104px;
+    max-width: 1090px;
+  }
+}
+
+.cover__subtitle {
+  color: $color-cover-subtitle;
+  font-family: $font-secondary;
+  text-align: left;
+
+  @include breakpoint($tablet-small (orientation landscape)) {
+    max-width: 415px;
+    text-align: left;
+  }
+
+  @include breakpoint($tablet-small (orientation portrait)) {
+    @include font-size($font-size-cover-subtitle / .65);
+    line-height: 28px;
+    max-width: 580px;
+    text-align: center;
+  }
+
+  @include breakpoint($tablet-large (orientation landscape)) {
+    @include font-size($font-size-cover-subtitle / .65);
+    line-height: 28px;
+    max-width: 580px;
+    text-align: center;
+  }
+
+  @include breakpoint($screen-small) {
+    @include font-size($font-size-cover-subtitle / .65);
+    line-height: 28px;
+    max-width: 580px;
+  }
+
+  @include breakpoint($screen-x-large) {
+    max-width: 735px;
+  }
+
+  @include breakpoint($screen-xxx-large) {
+    @include font-size($font-size-cover-subtitle / .52);
+    line-height: 32px;
+    max-width: 800px;
+  }
+}
+
+.cover__accent {
+  color: $color-cover-accent;
+  margin-right: -2px;
+
+  @include breakpoint($tablet-large (orientation landscape)) {
+    margin-right: -4px;
+  }
+  //
+  @include breakpoint($screen-small) {
+    // margin-right: -6px;
+  }
+}

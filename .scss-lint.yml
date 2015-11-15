@@ -1,0 +1,7 @@
+exclude: 'src/styles/_vendors/*'
+
+linters:
+    SelectorFormat:
+        enabled: false
+    Comment:
+        enabled: false
