@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Albert Casanovas — Engineering Manager | Barcelona</title>
+  <meta name="description" content="Albert Casanovas is a Barcelona-based Engineering Manager with 10+ years building scalable platforms and high-performing engineering teams. Currently leading the Reviews organization at Gartner Digital Markets." />
+  <meta name="keywords" content="Albert Casanovas, Engineering Manager, Barcelona, Gartner Digital Markets, Engineering Leadership, Distributed Systems, Reviews Platform, Senior Engineering Manager, Director of Engineering" />
+  <meta name="author" content="Albert Casanovas" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://albertdev.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://albertdev.com" />
+  <meta property="og:title" content="Albert Casanovas — Engineering Manager" />
+  <meta property="og:description" content="Barcelona-based engineering leader with 10+ years building scalable platforms and high-performing teams at Gartner Digital Markets." />
+  <meta property="og:image" content="https://albertdev.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="profile:first_name" content="Albert" />
+  <meta property="profile:last_name" content="Casanovas" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Albert Casanovas — Engineering Manager" />
+  <meta name="twitter:description" content="Barcelona-based engineering leader with 10+ years building scalable platforms and high-performing teams." />
+  <meta name="twitter:image" content="https://albertdev.com/assets/og-image.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Albert Casanovas",
+    "givenName": "Albert",
+    "familyName": "Casanovas",
+    "url": "https://albertdev.com",
+    "email": "mailto:hello@albertdev.com",
+    "telephone": "+34633255526",
+    "jobTitle": "Engineering Manager",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Gartner Digital Markets"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Barcelona",
+      "addressRegion": "Catalonia",
+      "addressCountry": "ES"
+    },
+    "sameAs": ["https://www.linkedin.com/in/casanovasalbert/"],
+    "description": "Product-oriented Engineering Manager with 10+ years of experience leading cross-functional teams to deliver scalable SaaS and data-driven platforms.",
+    "knowsLanguage": ["Catalan", "Spanish", "English"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universitat Oberta de Catalunya"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─────────────────────────────────────────────
+       Reset
+    ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ─────────────────────────────────────────────
+       Theme tokens
+    ───────────────────────────────────────────── */
+    :root {
+      --bg:            #0b0b13;
+      --surface:       #13131e;
+      --surface-2:     #1c1c2a;
+      --border:        #252537;
+      --text:          #e2e2f2;
+      --muted:         #6e6e98;
+      --accent:        #7c6af7;
+      --accent-dim:    rgba(124,106,247,.12);
+      --accent-hover:  #9180f9;
+      --nav-blur-bg:   rgba(11,11,19,.75);
+      --shadow:        0 8px 32px rgba(0,0,0,.45);
+      --radius:        14px;
+      --radius-sm:     8px;
+      --nav-h:         64px;
+      --ease:          .25s ease;
+    }
+
+    [data-theme="light"] {
+      --bg:            #f0f0f8;
+      --surface:       #ffffff;
+      --surface-2:     #f6f6fc;
+      --border:        #dcdcee;
+      --text:          #0e0e20;
+      --muted:         #5a5a80;
+      --accent:        #5b49e8;
+      --accent-dim:    rgba(91,73,232,.08);
+      --accent-hover:  #4a39d0;
+      --nav-blur-bg:   rgba(240,240,248,.80);
+      --shadow:        0 8px 32px rgba(0,0,0,.10);
+    }
+
+    /* ─────────────────────────────────────────────
+       Base
+    ───────────────────────────────────────────── */
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background var(--ease), color var(--ease);
+    }
+
+    a { color: inherit; }
+
+    /* ─────────────────────────────────────────────
+       Nav
+    ───────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: var(--nav-h);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.25rem, 5vw, 3rem);
+      background: var(--nav-blur-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--ease), border-color var(--ease);
+    }
+
+    .nav-brand {
+      font-size: .9375rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .nav-brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .8125rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--ease);
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: .875rem;
+    }
+
+    /* Theme toggle */
+    .theme-btn {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+      flex-shrink: 0;
+    }
+    .theme-btn:hover { color: var(--text); border-color: var(--accent); }
+    .theme-btn svg { width: 15px; height: 15px; }
+    .icon-sun, .icon-moon { display: none; }
+    [data-theme="dark"]  .icon-moon { display: block; }
+    [data-theme="light"] .icon-sun  { display: block; }
+
+    /* Mobile hamburger */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .burger span {
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all var(--ease);
+    }
+
+    /* ─────────────────────────────────────────────
+       Section shell
+    ───────────────────────────────────────────── */
+    .section-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(4rem, 10vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+    }
+
+    .section-label {
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .625rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -.035em;
+      line-height: 1.15;
+      margin-bottom: 2.25rem;
+    }
+
+    /* ─────────────────────────────────────────────
+       Hero
+    ───────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Ambient glow */
+    .hero-glow {
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(124,106,247,.18) 0%, transparent 65%);
+      top: 50%; left: 45%;
+      transform: translate(-50%, -55%);
+      pointer-events: none;
+      animation: pulse 9s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: .7; transform: translate(-50%,-55%) scale(1);   }
+      50%      { opacity: 1;  transform: translate(-50%,-55%) scale(1.1); }
+    }
+
+    /* Subtle grid overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: .18;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+    }
+    [data-theme="light"] .hero-grid { opacity: .10; }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      padding: calc(var(--nav-h) + 3rem) clamp(1.25rem, 5vw, 3rem) 5rem;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: .04em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 22px; height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(3.25rem, 9vw, 6.5rem);
+      font-weight: 800;
+      letter-spacing: -.05em;
+      line-height: .95;
+      margin-bottom: 1.125rem;
+    }
+
+    .hero-role {
+      font-size: clamp(1rem, 2.2vw, 1.375rem);
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 1.375rem;
+    }
+    .hero-role strong { color: var(--text); font-weight: 600; }
+
+    .hero-tagline {
+      font-size: clamp(.9375rem, 1.4vw, 1.0625rem);
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
+    /* Scroll cue */
+    .scroll-cue {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .375rem;
+      color: var(--muted);
+      font-size: .6875rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      opacity: .6;
+      animation: bob 2.5s ease-in-out infinite;
+    }
+    .scroll-cue svg { width: 16px; height: 16px; }
+    @keyframes bob {
+      0%,100% { transform: translateX(-50%) translateY(0);    }
+      50%      { transform: translateX(-50%) translateY(5px);  }
+    }
+
+    /* ─────────────────────────────────────────────
+       Buttons
+    ───────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .625rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-size: .875rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      transition: all var(--ease);
+    }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+    /* ─────────────────────────────────────────────
+       About
+    ───────────────────────────────────────────── */
+    #about .section-wrap { padding-top: 0; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .photo-col { }
+
+    .photo-img-wrap {
+      position: relative;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      display: block;
+      background: var(--surface-2);
+    }
+
+    .photo-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: calc(var(--radius) + 5px);
+      border: 1px solid var(--accent);
+      opacity: .25;
+      pointer-events: none;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .625rem;
+      margin-top: .875rem;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: .875rem .75rem;
+      text-align: center;
+    }
+    .stat-num {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -.03em;
+    }
+    .stat-lbl {
+      font-size: .65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+    }
+
+    .about-text p {
+      font-size: .9375rem;
+      color: var(--muted);
+      margin-bottom: .9375rem;
+    }
+    .about-text p strong { color: var(--text); font-weight: 600; }
+
+    .quote-block {
+      margin-top: 1.75rem;
+      padding: 1.125rem 1.375rem;
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .quote-block p {
+      font-size: .9375rem;
+      font-style: italic;
+      color: var(--text) !important;
+      margin: 0 !important;
+    }
+
+    /* ─────────────────────────────────────────────
+       Divider
+    ───────────────────────────────────────────── */
+    .divider { border: none; border-top: 1px solid var(--border); }
+
+    /* ─────────────────────────────────────────────
+       Experience / Timeline
+    ───────────────────────────────────────────── */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: .4375rem;
+      top: 8px; bottom: 8px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .t-item {
+      position: relative;
+      padding-bottom: 2.75rem;
+    }
+    .t-item:last-child { padding-bottom: 0; }
+
+    .t-dot {
+      position: absolute;
+      left: calc(-2rem + .25rem);
+      top: 7px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--border);
+      border: 2px solid var(--bg);
+    }
+    .t-item.active .t-dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-dim);
+    }
+
+    .t-company-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: .25rem;
+    }
+    .t-company {
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .t-dates {
+      font-size: .8rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .t-role {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      margin-bottom: .375rem;
+    }
+    .t-desc {
+      font-size: .875rem;
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+
+    .t-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .375rem;
+    }
+    .t-bullets li {
+      font-size: .875rem;
+      color: var(--muted);
+      padding-left: 1.125rem;
+      position: relative;
+    }
+    .t-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: .875rem;
+      line-height: 1.65;
+    }
+
+    .t-sub {
+      margin-top: 1.375rem;
+      padding-top: 1.375rem;
+      border-top: 1px dashed var(--border);
+    }
+    .t-sub .t-role {
+      font-size: .9375rem;
+      color: var(--text);
+    }
+
+    .t-li-link { color: var(--accent); text-decoration: none; }
+    .t-li-link:hover { text-decoration: underline; }
+
+    /* ─────────────────────────────────────────────
+       Skills
+    ───────────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.125rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.375rem;
+      transition: border-color var(--ease);
+    }
+    .skill-card:hover { border-color: var(--accent); }
+
+    .skill-card-title {
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .875rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+    .tag {
+      font-size: .725rem;
+      font-weight: 500;
+      padding: .275rem .6rem;
+      border-radius: 4px;
+      background: var(--surface-2);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      transition: all var(--ease);
+    }
+    .tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─────────────────────────────────────────────
+       Contact
+    ───────────────────────────────────────────── */
+    .contact-intro {
+      font-size: .9375rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 2rem;
+      line-height: 1.75;
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: .875rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.125rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--text);
+      transition: all var(--ease);
+    }
+    a.contact-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .cc-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-dim);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .cc-icon svg { width: 18px; height: 18px; }
+
+    .cc-lbl {
+      font-size: .7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+      margin-bottom: .125rem;
+    }
+    .cc-val {
+      font-size: .875rem;
+      font-weight: 600;
+    }
+
+    /* ─────────────────────────────────────────────
+       Footer
+    ───────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem clamp(1.25rem, 5vw, 3rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
+    .footer-copy {
+      font-size: .8rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+    .footer-links a {
+      font-size: .8rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--ease);
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ─────────────────────────────────────────────
+       Fade-up animation
+    ───────────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+
+    /* ─────────────────────────────────────────────
+       Responsive
+    ───────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        flex-direction: column;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: .75rem;
+        gap: 0;
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        display: block;
+        padding: .75rem 1rem;
+        border-radius: var(--radius-sm);
+      }
+      .burger { display: flex; }
+
+      .about-grid { grid-template-columns: 1fr; }
+      .photo-img-wrap { max-width: 180px; margin: 0 auto; }
+      .about-photo { aspect-ratio: 1; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+
+      .timeline { padding-left: 1.5rem; }
+      .t-dot { left: calc(-1.5rem + .25rem); }
+
+      .scroll-cue { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-company { white-space: nowrap; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; }
+      .hero-ctas .btn { width: 100%; justify-content: center; }
+    }
+
+    @media (max-width: 500px) {
+      .btn { font-size: .8125rem; padding: .5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav>
+    <a href="#hero" class="nav-brand">Albert <span>/DEV</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      onclick="closeNav()">About</a></li>
+      <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+      <li><a href="#skills"     onclick="closeNav()">Skills</a></li>
+      <li><a href="#contact"    onclick="closeNav()">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="burger" onclick="toggleNav()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2"  x2="12" y2="6"/>
+          <line x1="12" y1="18" x2="12" y2="22"/>
+          <line x1="4.22" y1="4.22"   x2="7.05" y2="7.05"/>
+          <line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/>
+          <line x1="2"  y1="12" x2="6"  y2="12"/>
+          <line x1="18" y1="12" x2="22" y2="12"/>
+          <line x1="4.22" y1="19.78"  x2="7.05" y2="16.95"/>
+          <line x1="16.95" y1="7.05"  x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid"  aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-eyebrow">Barcelona, Catalonia</div>
+
+        <h1>Albert<br>Casanovas</h1>
+
+        <p class="hero-role">
+          Engineering Manager &nbsp;·&nbsp; <strong><span class="hero-company">Gartner Digital Markets</span></strong>
+        </p>
+
+        <p class="hero-tagline">
+          I build high-performing engineering teams and scalable platforms.<br>
+          10+ years turning complexity into clarity — systems, people, and culture.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://www.linkedin.com/in/casanovasalbert/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:hello@albertdev.com" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@albertdev.com
+          </a>
+          <a href="assets/albert_casanovas_cv.pdf" download class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </section>
+
+    <!-- ── About ── -->
+    <section id="about">
+      <div class="section-wrap">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Engineering leadership<br>as a craft</h2>
+
+        <div class="about-grid fade-up">
+          <div class="photo-col">
+            <div class="photo-img-wrap">
+              <img src="assets/me.jpg" alt="Albert Casanovas — Engineering Manager" class="about-photo" loading="lazy" />
+              <div class="photo-ring" aria-hidden="true"></div>
+            </div>
+            <div class="about-stats">
+              <div class="stat"><span class="stat-num">10+</span><span class="stat-lbl">Years</span></div>
+              <div class="stat"><span class="stat-num">10+</span><span class="stat-lbl">Engineers</span></div>
+              <div class="stat"><span class="stat-num">~35%</span><span class="stat-lbl">Faster</span></div>
+              <div class="stat"><span class="stat-num">3</span><span class="stat-lbl">Languages</span></div>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p>I'm a product-oriented Engineering Manager with over a decade of experience building and scaling high-impact digital platforms. At <strong>Gartner Digital Markets</strong>, I lead the Reviews organization — the engine behind millions of user reviews across Capterra, GetApp, and Software Advice.</p>
+            <p>My work sits at the intersection of <strong>technical architecture, product strategy, and people leadership</strong>. I care deeply about developer experience, engineering culture, and the balance between strong architecture and pragmatic delivery.</p>
+            <p>Colleagues describe me as a connector — someone who unites teams after change, keeps communication open, and helps people grow through coaching and direct feedback. I've built teams from scratch, unified siloed functions, and consistently earned <strong>Exceeds Expectations</strong> performance reviews.</p>
+            <p>Away from work, I'm a father of three young boys (6, 4, and 5 months). They've taught me more about empathy, patience, and prioritization than any leadership book ever could — and those lessons come back to how I build and support teams every day.</p>
+            <div class="quote-block">
+              <p>"Engineering culture is a force multiplier. High performance emerges from autonomy, clear expectations, and accountability — not micromanagement."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ── -->
+    <hr class="divider" />
+    <section id="experience">
+      <div class="section-wrap">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Career timeline</h2>
+
+        <div class="timeline">
+
+          <!-- Gartner -->
+          <div class="t-item active fade-up">
+            <div class="t-dot"></div>
+            <div class="t-company-row">
+              <span class="t-company">Gartner Digital Markets</span>
+              <span class="t-dates">2020 – Present</span>
+            </div>
+
+            <div class="t-role">Engineering Manager</div>
+            <p class="t-desc">Oct 2023 – Present &nbsp;·&nbsp; Promoted through three levels in five years, now leading the full Reviews organization.</p>
+            <ul class="t-bullets">
+              <li>Lead 10+ engineers (Leads &amp; Seniors) delivering critical systems for millions of monthly users across Capterra, GetApp, and Software Advice</li>
+              <li>Drive engineering strategy, cross-team execution, and long-term architecture direction</li>
+              <li>Champion Developer Experience initiatives achieving ~35% faster release cadence</li>
+              <li>Unified previously siloed teams, improving collaboration and throughput across GDM</li>
+              <li>Consistently earned Exceeds Expectations performance ratings for leadership, delivery, and culture</li>
+            </ul>
+
+            <div class="t-sub">
+              <div class="t-role">Engineering Lead</div>
+              <p class="t-desc">Oct 2021 – Sep 2023</p>
+              <ul class="t-bullets">
+                <li>Drove Reviews 2.0 rearchitecture — event-driven microservices (Next.js, Node.js, MongoDB, Kafka, Kubernetes)</li>
+                <li>Built and scaled the Barcelona Reviews team from zero to a high-performing group</li>
+                <li>Aligned Review Collection, Moderation, and Publishing teams under a shared delivery model</li>
+              </ul>
+            </div>
+
+            <div class="t-sub">
+              <div class="t-role">Senior Software Engineer (Advanced)</div>
+              <p class="t-desc">Sep 2020 – Oct 2021</p>
+              <ul class="t-bullets">
+                <li>Led technical ownership of the Central Review Form during a leadership transition</li>
+                <li>Modernized from AWS Lambda/DynamoDB to React/Next.js + MongoDB stack</li>
+                <li>Introduced event-driven design patterns and microservices architecture</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Xogito -->
+          <div class="t-item fade-up">
+            <div class="t-dot"></div>
+            <div class="t-company-row">
+              <span class="t-company">Xogito Group</span>
+              <span class="t-dates">Feb 2020 – Sep 2020</span>
+            </div>
+            <div class="t-role">Engineering Lead</div>
+            <p class="t-desc">Led a remote, cross-functional team of 7+ engineers, designers, and QA specialists delivering SaaS and mobile solutions for global clients.</p>
+            <ul class="t-bullets">
+              <li>Directed multiple concurrent client projects across frontend, backend, QA, design, and native mobile</li>
+              <li>Guided architecture modernization using React, Node.js, GraphQL, TypeScript</li>
+              <li>Implemented and optimized GitLab CI/CD pipelines, improving delivery reliability</li>
+            </ul>
+          </div>
+
+          <!-- Evolve -->
+          <div class="t-item fade-up">
+            <div class="t-dot"></div>
+            <div class="t-company-row">
+              <span class="t-company">Evolve Adaptive Learning</span>
+              <span class="t-dates">Nov 2017 – Dec 2019</span>
+            </div>
+            <div class="t-role">Founding Engineer &amp; Technical Lead</div>
+            <p class="t-desc">Shanghai-based corporate learning startup. Led engineering strategy and delivery from architecture to production for international enterprise clients.</p>
+            <ul class="t-bullets">
+              <li>Built the platform's core architecture using React, Redux, Node.js, GraphQL, Ruby on Rails</li>
+              <li>Delivered iOS and Android React Native apps for Adidas, Cartier, Chanel, and Jaeger-LeCoultre</li>
+              <li>Established engineering standards, CI/CD workflows, and code review culture from day one</li>
+            </ul>
+          </div>
+
+          <!-- Earlier -->
+          <div class="t-item fade-up">
+            <div class="t-dot"></div>
+            <div class="t-company-row">
+              <span class="t-company">Earlier Roles</span>
+              <span class="t-dates">– 2017</span>
+            </div>
+            <div class="t-role">Freelance Full-Stack Developer &amp; earlier positions</div>
+            <p class="t-desc">INTER SERVICES EURO AMERICA, Renommé Barcelona, Zitric Media — <a href="https://www.linkedin.com/in/casanovasalbert/" target="_blank" rel="noopener noreferrer" class="t-li-link">full details on LinkedIn</a>.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Skills ── -->
+    <hr class="divider" />
+    <section id="skills">
+      <div class="section-wrap">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Skills &amp; competencies</h2>
+
+        <div class="skills-grid fade-up">
+          <div class="skill-card">
+            <div class="skill-card-title">Leadership &amp; Strategy</div>
+            <div class="tags">
+              <span class="tag">People Development</span>
+              <span class="tag">Performance Management</span>
+              <span class="tag">Coaching &amp; Feedback</span>
+              <span class="tag">Hiring &amp; Onboarding</span>
+              <span class="tag">OKRs</span>
+              <span class="tag">Stakeholder Alignment</span>
+              <span class="tag">Cross-functional Collaboration</span>
+              <span class="tag">Change Leadership</span>
+              <span class="tag">Org Scaling</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Engineering Management</div>
+            <div class="tags">
+              <span class="tag">Delivery Excellence</span>
+              <span class="tag">Developer Experience (DevEx)</span>
+              <span class="tag">CI/CD Automation</span>
+              <span class="tag">Observability</span>
+              <span class="tag">High Availability</span>
+              <span class="tag">Multi-region Systems</span>
+              <span class="tag">Agile at Scale</span>
+              <span class="tag">Team Maturity</span>
+              <span class="tag">Technical Roadmaps</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Architecture &amp; Systems</div>
+            <div class="tags">
+              <span class="tag">Distributed Systems</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Event-Driven Architecture</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Redis / Valkey</span>
+              <span class="tag">Elasticsearch</span>
+              <span class="tag">SQS / SNS</span>
+              <span class="tag">Snowflake</span>
+              <span class="tag">Datadog</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Tech Stack</div>
+            <div class="tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">React / Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">GitLab CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">AI &amp; Emerging Tech</div>
+            <div class="tags">
+              <span class="tag">LLM Integration</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Model Context Protocol (MCP)</span>
+              <span class="tag">AI-assisted DevEx</span>
+              <span class="tag">OWASP LLM Top 10</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Languages</div>
+            <div class="tags">
+              <span class="tag">Catalan — Native</span>
+              <span class="tag">Spanish — Native</span>
+              <span class="tag">English — Full Professional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <hr class="divider" />
+    <section id="contact">
+      <div class="section-wrap">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Let's connect</h2>
+
+        <p class="contact-intro">
+          Open to conversations about Senior Engineering Manager and Director of Engineering opportunities — particularly in platform-heavy, distributed systems environments. EU remote or global remote-first preferred.
+        </p>
+
+        <div class="contact-cards fade-up">
+          <a href="mailto:hello@albertdev.com" class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="cc-lbl">Email</div>
+              <div class="cc-val">hello@albertdev.com</div>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/casanovasalbert/" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <div class="cc-lbl">LinkedIn</div>
+              <div class="cc-val">casanovasalbert</div>
+            </div>
+          </a>
+
+          <a href="tel:+34633255526" class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 10.8 19.79 19.79 0 0 1 .92 2.18 2 2 0 0 1 2.92.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.09-1.08a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+            </div>
+            <div>
+              <div class="cc-lbl">Phone</div>
+              <div class="cc-val">+34 633 255 526</div>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="cc-lbl">Location</div>
+              <div class="cc-val">Barcelona, Catalonia</div>
+            </div>
+          </div>
+
+          <a href="assets/albert_casanovas_cv.pdf" download class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <div>
+              <div class="cc-lbl">Resume</div>
+              <div class="cc-val">Download CV (PDF)</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <span class="footer-copy">© 2026 Albert Casanovas &nbsp;·&nbsp; Barcelona, Catalonia</span>
+    <div class="footer-links">
+      <a href="mailto:hello@albertdev.com">Email</a>
+      <a href="https://www.linkedin.com/in/casanovasalbert/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="assets/albert_casanovas_cv.pdf" download>CV</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Theme ────────────────────────────────────
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+      html.dataset.theme = next;
+      localStorage.setItem('theme', next);
+    }
+
+    (function initTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.dataset.theme = saved;
+      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+
+    // ── Mobile nav ───────────────────────────────
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+
+    // ── Fade-up on scroll ─────────────────────────
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

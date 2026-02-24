@@ -1,0 +1,13 @@
+# Context files — private, never commit
+context/
+
+# Claude / Playwright tooling
+.claude/
+.playwright-mcp/
+
+# Screenshots / temp files
+*.jpeg
+*.tmp
+
+# macOS
+.DS_Store
