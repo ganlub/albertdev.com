@@ -1,0 +1,63 @@
+# Albert Casanovas
+
+> Engineering Manager based in Barcelona, Catalonia. Currently leading the Reviews organization at Gartner Digital Markets.
+
+## About
+
+Albert Casanovas is a product-oriented Engineering Manager with 10+ years of experience building and scaling high-impact digital platforms. He leads the Reviews organization at Gartner Digital Markets — the engine behind millions of user reviews across Capterra, GetApp, and Software Advice.
+
+His work sits at the intersection of technical architecture, product strategy, and people leadership. He cares deeply about developer experience, engineering culture, and the balance between strong architecture and pragmatic delivery.
+
+Colleagues describe him as a connector — someone who unites teams after change, keeps communication open, and helps people grow through coaching and direct feedback. He has built teams from scratch, unified siloed functions, and consistently earned Exceeds Expectations performance reviews.
+
+## Career
+
+- **Engineering Manager** — Gartner Digital Markets (Oct 2023 – Present)
+  - Leads 10+ engineers (Leads & Seniors) delivering critical systems for millions of monthly users
+  - Drives engineering strategy, cross-team execution, and long-term architecture direction
+  - Champions Developer Experience initiatives achieving ~35% faster release cadence
+  - Unified previously siloed teams, improving collaboration and throughput
+
+- **Engineering Lead** — Gartner Digital Markets (Oct 2021 – Sep 2023)
+  - Drove Reviews 2.0 rearchitecture (event-driven microservices: Next.js, Node.js, MongoDB, Kafka, Kubernetes)
+  - Built and scaled the Barcelona Reviews team from zero
+
+- **Senior Software Engineer (Advanced)** — Gartner Digital Markets (Sep 2020 – Oct 2021)
+  - Led technical ownership of the Central Review Form
+  - Modernized stack to React/Next.js + MongoDB; introduced event-driven patterns
+
+- **Engineering Lead** — Xogito Group (Feb 2020 – Sep 2020)
+  - Led remote cross-functional team of 7+ engineers delivering SaaS and mobile solutions
+
+- **Founding Engineer & Technical Lead** — Evolve Adaptive Learning (Nov 2017 – Dec 2019)
+  - Built platform architecture using React, Redux, Node.js, GraphQL, Ruby on Rails
+  - Delivered React Native apps for Adidas, Cartier, Chanel, Jaeger-LeCoultre
+
+- **Earlier**: Freelance Full-Stack Developer and earlier positions (– 2017)
+
+## Skills
+
+**Leadership & Strategy**: People Development, Performance Management, Coaching & Feedback, Hiring & Onboarding, OKRs, Stakeholder Alignment, Cross-functional Collaboration, Change Leadership, Org Scaling
+
+**Engineering Management**: Delivery Excellence, Developer Experience (DevEx), CI/CD Automation, Observability, High Availability, Multi-region Systems, Agile at Scale, Technical Roadmaps
+
+**Architecture & Systems**: Distributed Systems, Microservices, Event-Driven Architecture, Kafka, Kubernetes, AWS, Redis/Valkey, Elasticsearch, SQS/SNS, Snowflake, Datadog
+
+**Tech Stack**: TypeScript, React/Next.js, Node.js, Python, GraphQL, MongoDB, PostgreSQL, Docker, GitHub Actions, GitLab CI/CD
+
+**AI & Emerging Tech**: LLM Integration, Prompt Engineering, RAG, Model Context Protocol (MCP), AI-assisted DevEx, OWASP LLM Top 10
+
+**Languages**: Catalan (Native), Spanish (Native), English (Full Professional)
+
+## Contact
+
+- Email: hello@albertdev.com
+- LinkedIn: https://www.linkedin.com/in/casanovasalbert/
+- Phone: +34 633 255 526
+- Location: Barcelona, Catalonia
+- Website: https://albertdev.com
+- CV: https://albertdev.com/assets/albert_casanovas_cv.pdf
+
+## Open to
+
+Senior Engineering Manager and Director of Engineering opportunities — particularly in platform-heavy, distributed systems environments. EU remote or global remote-first preferred.

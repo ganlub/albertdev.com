@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /context/
+
+Sitemap: https://albertdev.com/sitemap.xml
