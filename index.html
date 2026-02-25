@@ -74,10 +74,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#0b0b13" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts — async to avoid render blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 
   <style>
     /* ─────────────────────────────────────────────
@@ -103,7 +104,7 @@
       --surface-2:     #1c1c2a;
       --border:        #252537;
       --text:          #e2e2f2;
-      --muted:         #6e6e98;
+      --muted:         #8080a0;
       --accent:        #7c6af7;
       --accent-dim:    rgba(124,106,247,.12);
       --accent-hover:  #9180f9;
@@ -891,7 +892,10 @@
         <div class="about-grid fade-up">
           <div class="photo-col">
             <div class="photo-img-wrap">
-              <img src="assets/me.jpg" alt="Albert Casanovas — Engineering Manager" class="about-photo" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/me-300.webp 300w, assets/me.webp 600w" sizes="(max-width: 768px) 180px, 260px" />
+                <img src="assets/me.jpg" alt="Albert Casanovas — Engineering Manager" class="about-photo" loading="lazy" />
+              </picture>
               <div class="photo-ring" aria-hidden="true"></div>
             </div>
             <div class="about-stats">
