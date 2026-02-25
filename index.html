@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
 
   <!-- Primary SEO -->
   <title>Albert Casanovas — Engineering Manager | Barcelona</title>
   <meta name="description" content="Albert Casanovas is a Barcelona-based Engineering Manager with 10+ years building scalable platforms and high-performing engineering teams. Currently leading the Reviews organization at Gartner Digital Markets." />
-  <meta name="keywords" content="Albert Casanovas — Engineering Manager, Barcelona, Gartner Digital Markets, Engineering Leadership, Distributed Systems, Reviews Platform, Senior Engineering Manager, Director of Engineering" />
+  <meta name="keywords" content="Albert Casanovas, Engineering Manager, Barcelona, Gartner Digital Markets, Engineering Leadership, Distributed Systems, Reviews Platform, Senior Engineering Manager, Director of Engineering" />
   <meta name="author" content="Albert Casanovas" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://albertdev.com" />
@@ -83,7 +84,15 @@
        Reset
     ───────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem; z-index: 9999;
+      background: var(--accent); color: #fff; padding: .5rem 1rem;
+      border-radius: var(--radius-sm); font-weight: 600; font-size: .875rem;
+    }
+    .skip-link:focus { top: .75rem; }
 
     /* ─────────────────────────────────────────────
        Theme tokens
@@ -270,11 +279,13 @@
       top: 50%; left: 45%;
       transform: translate(-50%, -55%);
       pointer-events: none;
-      animation: pulse 9s ease-in-out infinite;
     }
-    @keyframes pulse {
-      0%,100% { opacity: .7; transform: translate(-50%,-55%) scale(1);   }
-      50%      { opacity: 1;  transform: translate(-50%,-55%) scale(1.1); }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-glow { animation: pulse 9s ease-in-out infinite; }
+      @keyframes pulse {
+        0%,100% { opacity: .7; transform: translate(-50%,-55%) scale(1);   }
+        50%      { opacity: 1;  transform: translate(-50%,-55%) scale(1.1); }
+      }
     }
 
     /* Subtle grid overlay */
@@ -363,12 +374,14 @@
       letter-spacing: .1em;
       text-transform: uppercase;
       opacity: .6;
-      animation: bob 2.5s ease-in-out infinite;
     }
     .scroll-cue svg { width: 16px; height: 16px; }
-    @keyframes bob {
-      0%,100% { transform: translateX(-50%) translateY(0);    }
-      50%      { transform: translateX(-50%) translateY(5px);  }
+    @media (prefers-reduced-motion: no-preference) {
+      .scroll-cue { animation: bob 2.5s ease-in-out infinite; }
+      @keyframes bob {
+        0%,100% { transform: translateX(-50%) translateY(0);    }
+        50%      { transform: translateX(-50%) translateY(5px);  }
+      }
     }
 
     /* ─────────────────────────────────────────────
@@ -790,6 +803,8 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ── Nav ── -->
   <nav>
     <a href="#hero" class="nav-brand">Albert <span>/DEV</span></a>
@@ -802,7 +817,7 @@
     </ul>
 
     <div class="nav-right">
-      <button class="burger" onclick="toggleNav()" aria-label="Toggle menu">
+      <button class="burger" onclick="toggleNav()" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -824,7 +839,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
 
     <!-- ── Hero ── -->
     <section id="hero">
@@ -1173,24 +1188,34 @@
       const html = document.documentElement;
       const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
       html.dataset.theme = next;
-      localStorage.setItem('theme', next);
+      document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0b0b13' : '#f0f0f8';
+      try { localStorage.setItem('theme', next); } catch (_) {}
     }
 
     (function initTheme() {
-      const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.documentElement.dataset.theme = saved;
-      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved) {
+          document.documentElement.dataset.theme = saved;
+          document.querySelector('meta[name="theme-color"]').content = saved === 'dark' ? '#0b0b13' : '#f0f0f8';
+          return;
+        }
+      } catch (_) {}
+      if (window.matchMedia('(prefers-color-scheme: light)').matches) {
         document.documentElement.dataset.theme = 'light';
+        document.querySelector('meta[name="theme-color"]').content = '#f0f0f8';
       }
     })();
 
     // ── Mobile nav ───────────────────────────────
     function toggleNav() {
-      document.getElementById('navLinks').classList.toggle('open');
+      const btn = document.querySelector('.burger');
+      const isOpen = document.getElementById('navLinks').classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
     }
     function closeNav() {
       document.getElementById('navLinks').classList.remove('open');
+      document.querySelector('.burger').setAttribute('aria-expanded', 'false');
     }
 
     // ── Fade-up on scroll ─────────────────────────
